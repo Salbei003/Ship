@@ -46,7 +46,7 @@ public class ShootController : MonoBehaviour
     {
         if (collision.transform.CompareTag("Enemy"))
         {
-            collision.transform.GetComponent<MeteorController>().GetDamage(config.DMG * ShipModel.baseDmg); Debug.Log(config.DMG * ShipModel.baseDmg);
+            collision.transform.GetComponent<MeteorController>().GetDamage(config.DMG * ShipModel.baseDmg);
             view.SetOff();
         }
     }

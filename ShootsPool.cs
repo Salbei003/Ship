@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Diagnostics;
 
 public class ShootsPool : MonoBehaviour
 {
@@ -70,7 +71,7 @@ public class ShootsPool : MonoBehaviour
     
     private void AmmoResoring()
     {
-
+        Debug.Log("Ammo Restoring");
         ship.view.AmmoSlider.MaxValueChange(ship.model.shootsSpeedSpawn);
         ship.view.AmmoSlider.Slider.DOValue(ship.view.AmmoSlider.CurrentMaxValue, ship.model.shootsSpeedSpawn)
             .OnComplete(() => pause = false);
